@@ -1,0 +1,16 @@
+title: Gavin's Portfolio
+description: Personal portfolio site
+theme: jekyll-theme-minimal
+
+# Optional: shown in the sidebar area of the Minimal theme
+# logo: /assets/img/logo.png
+
+# GitHub link rendered by the theme
+github:
+  is_project_page: false
+  owner_name: GavopianTheGreat
+  owner_url: https://github.com/GavopianTheGreat
+  repository_name: Portfolio
+  repository_url: https://github.com/GavopianTheGreat/Portfolio
+
+show_downloads: false
