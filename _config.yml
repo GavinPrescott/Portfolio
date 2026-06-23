@@ -1,16 +1,25 @@
-title: Gavin's Portfolio
-description: Personal portfolio site
-theme: jekyll-theme-minimal
+title: Gavin Prescott
+description: Robotics Engineer
+author: Gavin Prescott
+email: gjpres19@bu.edu
 
-# Optional: shown in the sidebar area of the Minimal theme
-# logo: /assets/img/logo.png
+# Custom layout — no Jekyll theme used.
+# To re-enable the Minimal theme, uncomment the line below.
+# theme: jekyll-theme-minimal
 
-# GitHub link rendered by the theme
-github:
-  is_project_page: false
-  owner_name: GavopianTheGreat
-  owner_url: https://github.com/GavopianTheGreat
-  repository_name: Portfolio
-  repository_url: https://github.com/GavopianTheGreat/Portfolio
+# Repo info (used in footer / contact section)
+github_username: gavinprescott
+github_url: https://github.com/gavinprescott
+# linkedin_url: https://www.linkedin.com/in/your-handle/   # add when ready
 
-show_downloads: false
+# Site URL settings — keep these so links resolve correctly on GitHub Pages
+baseurl: "/Portfolio"
+url: "https://gavinprescott.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - README.md
+  - .gitignore
