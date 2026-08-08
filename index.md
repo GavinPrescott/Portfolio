@@ -27,6 +27,7 @@ title: Home
 
 <section id="work" class="work-section">
   <!--
+<<<<<<< Updated upstream
     Rotating work banner. Swap each .banner-slide div for a real image when you have photos:
       <img class="banner-slide" src="{{ '/assets/img/work-01.jpg' | relative_url }}" alt="">
     Any number of slides works — add or remove <div>/<img> elements and the
@@ -38,6 +39,18 @@ title: Home
       <div class="banner-slide banner-slide-placeholder"><span class="placeholder">[WORK IMAGE 2]</span></div>
       <div class="banner-slide banner-slide-placeholder"><span class="placeholder">[WORK IMAGE 3]</span></div>
       <div class="banner-slide banner-slide-placeholder"><span class="placeholder">[WORK IMAGE 4]</span></div>
+=======
+    Rotating work banner — 4 slides, 6s each, 24s loop.
+    Adding or removing slides means updating the .banner-slide:nth-child delays
+    and the animation duration in style.css.
+  -->
+  <a href="{{ '/projects/' | relative_url }}" class="work-banner">
+    <div class="banner-slides">
+      <img class="banner-slide" src="{{ '/assets/img/banner/robotarm.jpg' | relative_url }}" alt="" aria-hidden="true">
+      <img class="banner-slide" src="{{ '/assets/img/banner/bagatelle.jpg' | relative_url }}" alt="" aria-hidden="true">
+      <img class="banner-slide" src="{{ '/assets/img/banner/warbird.jpg' | relative_url }}" alt="" aria-hidden="true">
+      <img class="banner-slide" src="{{ '/assets/img/banner/truss.jpg' | relative_url }}" alt="" aria-hidden="true">
+>>>>>>> Stashed changes
     </div>
     <div class="banner-veil"></div>
     <div class="banner-caption">
