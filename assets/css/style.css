@@ -512,6 +512,7 @@ button.contact-card {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* Stand-in tiles until real work photos exist */
 .banner-slide-placeholder {
   display: flex;
@@ -525,11 +526,16 @@ button.contact-card {
 .banner-slide-placeholder:nth-child(3) { background: radial-gradient(ellipse at 70% 70%, rgba(52, 211, 153, 0.12) 0%, transparent 60%), linear-gradient(135deg, var(--bg-elevated) 0%, #1f232b 60%, #16191f 100%); }
 .banner-slide-placeholder:nth-child(4) { background: radial-gradient(ellipse at 30% 35%, rgba(251, 191, 36, 0.12) 0%, transparent 60%), linear-gradient(135deg, #242931 0%, var(--bg-base) 60%, #191c22 100%); }
 =======
+=======
+>>>>>>> Stashed changes
 /* Per-slide framing — subject sits at a different spot in each photo */
 .banner-slide:nth-child(1) { object-position: 62% center; }  /* robot arm — push right of the card */
 .banner-slide:nth-child(2) { object-position: center 45%; }  /* bagatelle */
 .banner-slide:nth-child(3) { object-position: 55% center; }  /* warbird */
 .banner-slide:nth-child(4) { object-position: center 55%; }  /* truss */
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 .banner-veil {

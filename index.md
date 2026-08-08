@@ -24,6 +24,7 @@ title: Home
     </div>
   </div>
 </section>
+<<<<<<< Updated upstream
 
 <section id="work" class="work-section">
   <!--
@@ -102,6 +103,72 @@ title: Home
     <h2><span class="placeholder">[PLACEHOLDER]</span></h2>
     <div class="experience-list">
 
+=======
+
+<section id="work" class="work-section">
+  <!--
+    Rotating work banner — 4 slides, 6s each, 24s loop.
+    Adding or removing slides means updating the .banner-slide:nth-child delays
+    and the animation duration in style.css.
+  -->
+  <a href="{{ '/projects/' | relative_url }}" class="work-banner">
+    <div class="banner-slides">
+      <img class="banner-slide" src="{{ '/assets/img/banner/robotarm.jpg' | relative_url }}" alt="" aria-hidden="true">
+      <img class="banner-slide" src="{{ '/assets/img/banner/bagatelle.jpg' | relative_url }}" alt="" aria-hidden="true">
+      <img class="banner-slide" src="{{ '/assets/img/banner/warbird.jpg' | relative_url }}" alt="" aria-hidden="true">
+      <img class="banner-slide" src="{{ '/assets/img/banner/truss.jpg' | relative_url }}" alt="" aria-hidden="true">
+    </div>
+    <div class="banner-veil"></div>
+    <div class="banner-caption">
+      <div class="banner-caption-inner">
+        <div class="banner-card">
+          <p>10 years of technical experience</p>
+        </div>
+        <span class="banner-cta">View all projects</span>
+      </div>
+    </div>
+  </a>
+</section>
+
+<section id="about">
+  <div class="container">
+    <p class="section-label"><span class="placeholder">[PLACEHOLDER]</span></p>
+    <h2><span class="placeholder">[PLACEHOLDER]</span></h2>
+    <p class="lede"><span class="placeholder">[PLACEHOLDER — one or two sentences framing the two paths below]</span></p>
+
+    <div class="door-grid">
+
+      <a href="{{ '/about/technical/' | relative_url }}" class="door-card">
+        <img class="door-photo" src="{{ '/assets/img/HeroImage.JPG' | relative_url }}" alt="">
+        <div class="door-body">
+          <p class="door-label"><span class="placeholder">[PLACEHOLDER]</span></p>
+          <h3>Technical &amp; Project Experience</h3>
+          <p><span class="placeholder">[PLACEHOLDER — what a reader finds down this path]</span></p>
+          <span class="door-cta">Read more</span>
+        </div>
+      </a>
+
+      <a href="{{ '/about/personal/' | relative_url }}" class="door-card">
+        <img class="door-photo" src="{{ '/assets/img/headshot.jpg' | relative_url }}" alt="">
+        <div class="door-body">
+          <p class="door-label"><span class="placeholder">[PLACEHOLDER]</span></p>
+          <h3>A More Personal Look</h3>
+          <p><span class="placeholder">[PLACEHOLDER — what a reader finds down this path]</span></p>
+          <span class="door-cta">Read more</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <p class="section-label"><span class="placeholder">[PLACEHOLDER]</span></p>
+    <h2><span class="placeholder">[PLACEHOLDER]</span></h2>
+    <div class="experience-list">
+
+>>>>>>> Stashed changes
       <article class="experience-item">
         <!--
           Preserved GIS research data (uncomment / restore when writing this card):
