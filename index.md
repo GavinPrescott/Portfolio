@@ -61,11 +61,11 @@ title: Home
 
     <div class="door-grid">
 
-      <a href="{{ '/about/technical/' | relative_url }}" class="door-card">
+      <a href="{{ '/projects/' | relative_url }}" class="door-card">
         <img class="door-photo" src="{{ '/assets/img/HeroImage.JPG' | relative_url }}" alt="">
         <div class="door-body">
           <p class="door-label"><span class="placeholder">[PLACEHOLDER]</span></p>
-          <h3>Technical &amp; Project Experience</h3>
+          <h3>Technical &amp; Professional Experience</h3>
           <p><span class="placeholder">[PLACEHOLDER — what a reader finds down this path]</span></p>
           <span class="door-cta">Read more</span>
         </div>
@@ -186,7 +186,11 @@ title: Home
 <section id="contact" class="contact">
   <div class="container">
     <p class="section-label">Get in touch</p>
+<<<<<<< Updated upstream
     <h2>Let's make something move</h2>
+=======
+    <h2>Let's make something move.</h2>
+>>>>>>> Stashed changes
     <p class="lede">I'm looking for internships and co-ops in robotics, mechatronics, and embedded systems. If you're building something in that space, I'd like to hear about it.</p>
     <div class="contact-grid">
 

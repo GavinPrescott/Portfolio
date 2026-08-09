@@ -624,6 +624,30 @@ section[id] { scroll-margin-top: 72px; }
 .project-detail li { margin-bottom: 0.5rem; }
 .project-detail strong { color: var(--text-primary); }
 
+/* Personal statement + timeline (about/personal) */
+.statement p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  max-width: 68ch;
+}
+.statement strong { color: var(--accent); font-weight: 600; }
+.statement-rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 3.5rem 0 0;
+}
+.era { padding-top: 3.5rem; }
+.era-meta {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-subtle);
+  margin-bottom: 0.5rem;
+}
+.era h2 { font-size: 1.5rem; margin-top: 0; margin-bottom: 1rem; }
+.era p { max-width: 70ch; }
+
 /* Image gallery */
 .gallery {
   display: grid;
