@@ -185,9 +185,9 @@ title: Home
 
 <section id="contact" class="contact">
   <div class="container">
-    <p class="section-label"><span class="placeholder">[PLACEHOLDER]</span></p>
-    <h2><span class="placeholder">[PLACEHOLDER]</span></h2>
-    <p class="lede"><span class="placeholder">[PLACEHOLDER]</span></p>
+    <p class="section-label">Get in touch</p>
+    <h2>Let's make something move.</h2>
+    <p class="lede">I'm looking for internships and co-ops in robotics, mechatronics, and embedded systems. If you're building something in that space, I'd like to hear about it.</p>
     <div class="contact-grid">
 
       <button type="button" class="contact-card contact-copy" data-copy="Gavin.j.prescott@gmail.com">
