@@ -483,7 +483,7 @@ button.contact-card {
   position: relative;
   display: block;
   width: 100%;
-  min-height: 100vh;
+  min-height: 70vh;
   overflow: hidden;
   color: var(--text-primary);
 }
@@ -495,48 +495,31 @@ button.contact-card {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  animation: bannerCycle 24s infinite;
+  animation: bannerCycle 30s infinite;
 }
-/* 4 slides × 6s each. Adding/removing slides? Match the count here and in the total duration. */
+/* 5 slides × 6s each = 30s. Every slide MUST have a delay rule — one without a
+   rule defaults to 0s and fires on top of slide 1 at page load. */
 .banner-slide:nth-child(1) { animation-delay: 0s; }
 .banner-slide:nth-child(2) { animation-delay: 6s; }
 .banner-slide:nth-child(3) { animation-delay: 12s; }
 .banner-slide:nth-child(4) { animation-delay: 18s; }
+.banner-slide:nth-child(5) { animation-delay: 24s; }
 
 @keyframes bannerCycle {
   0%   { opacity: 0; }
   2%   { opacity: 1; }
-  25%  { opacity: 1; }
-  27%  { opacity: 0; }
+  20%  { opacity: 1; }   /* 6s of 30s = 20% */
+  22%  { opacity: 0; }
   100% { opacity: 0; }
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-/* Stand-in tiles until real work photos exist */
-.banner-slide-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background:
-    radial-gradient(ellipse at 65% 40%, rgba(96, 165, 250, 0.16) 0%, transparent 60%),
-    linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-base) 60%, #1a1d24 100%);
-}
-.banner-slide-placeholder:nth-child(2) { background: radial-gradient(ellipse at 35% 60%, rgba(236, 72, 153, 0.14) 0%, transparent 60%), linear-gradient(135deg, #262b34 0%, var(--bg-base) 60%, #171a20 100%); }
-.banner-slide-placeholder:nth-child(3) { background: radial-gradient(ellipse at 70% 70%, rgba(52, 211, 153, 0.12) 0%, transparent 60%), linear-gradient(135deg, var(--bg-elevated) 0%, #1f232b 60%, #16191f 100%); }
-.banner-slide-placeholder:nth-child(4) { background: radial-gradient(ellipse at 30% 35%, rgba(251, 191, 36, 0.12) 0%, transparent 60%), linear-gradient(135deg, #242931 0%, var(--bg-base) 60%, #191c22 100%); }
-=======
-=======
->>>>>>> Stashed changes
-/* Per-slide framing — subject sits at a different spot in each photo */
-.banner-slide:nth-child(1) { object-position: 62% center; }  /* robot arm — push right of the card */
-.banner-slide:nth-child(2) { object-position: center 45%; }  /* bagatelle */
-.banner-slide:nth-child(3) { object-position: 55% center; }  /* warbird */
-.banner-slide:nth-child(4) { object-position: center 55%; }  /* truss */
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+/* Per-slide framing — each photo's subject sits somewhere different, and the
+   glass card occupies the left, so most are nudged right to stay clear of it. */
+.banner-slide:nth-child(1) { object-position: center 55%; }  /* bagatelle  */
+.banner-slide:nth-child(2) { object-position: 60% center; }  /* MEArm      */
+.banner-slide:nth-child(3) { object-position: 62% center; }  /* coolsculpt */
+.banner-slide:nth-child(4) { object-position: 58% center; }  /* warbird    */
+.banner-slide:nth-child(5) { object-position: center 45%; }  /* truss      */
 
 .banner-veil {
   position: absolute;
@@ -570,7 +553,8 @@ button.contact-card {
 
 /* Darker sibling of .hero-card */
 .banner-card {
-  display: inline-block;
+  display: block;
+  width: fit-content;   /* block-level so the CTA sits BELOW, not beside it */
   background: rgba(12, 14, 19, 0.62);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -589,7 +573,7 @@ button.contact-card {
   color: var(--text-primary);
 }
 .banner-cta {
-  display: inline-block;
+  display: block;
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--accent);
