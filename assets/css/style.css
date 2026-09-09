@@ -483,7 +483,7 @@ button.contact-card {
   position: relative;
   display: block;
   width: 100%;
-  min-height: 100vh;
+  min-height: 70vh;
   overflow: hidden;
   color: var(--text-primary);
 }
@@ -495,48 +495,31 @@ button.contact-card {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  animation: bannerCycle 24s infinite;
+  animation: bannerCycle 30s infinite;
 }
-/* 4 slides × 6s each. Adding/removing slides? Match the count here and in the total duration. */
+/* 5 slides × 6s each = 30s. Every slide MUST have a delay rule — one without a
+   rule defaults to 0s and fires on top of slide 1 at page load. */
 .banner-slide:nth-child(1) { animation-delay: 0s; }
 .banner-slide:nth-child(2) { animation-delay: 6s; }
 .banner-slide:nth-child(3) { animation-delay: 12s; }
 .banner-slide:nth-child(4) { animation-delay: 18s; }
+.banner-slide:nth-child(5) { animation-delay: 24s; }
 
 @keyframes bannerCycle {
   0%   { opacity: 0; }
   2%   { opacity: 1; }
-  25%  { opacity: 1; }
-  27%  { opacity: 0; }
+  20%  { opacity: 1; }   /* 6s of 30s = 20% */
+  22%  { opacity: 0; }
   100% { opacity: 0; }
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-/* Stand-in tiles until real work photos exist */
-.banner-slide-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background:
-    radial-gradient(ellipse at 65% 40%, rgba(96, 165, 250, 0.16) 0%, transparent 60%),
-    linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-base) 60%, #1a1d24 100%);
-}
-.banner-slide-placeholder:nth-child(2) { background: radial-gradient(ellipse at 35% 60%, rgba(236, 72, 153, 0.14) 0%, transparent 60%), linear-gradient(135deg, #262b34 0%, var(--bg-base) 60%, #171a20 100%); }
-.banner-slide-placeholder:nth-child(3) { background: radial-gradient(ellipse at 70% 70%, rgba(52, 211, 153, 0.12) 0%, transparent 60%), linear-gradient(135deg, var(--bg-elevated) 0%, #1f232b 60%, #16191f 100%); }
-.banner-slide-placeholder:nth-child(4) { background: radial-gradient(ellipse at 30% 35%, rgba(251, 191, 36, 0.12) 0%, transparent 60%), linear-gradient(135deg, #242931 0%, var(--bg-base) 60%, #191c22 100%); }
-=======
-=======
->>>>>>> Stashed changes
-/* Per-slide framing — subject sits at a different spot in each photo */
-.banner-slide:nth-child(1) { object-position: 62% center; }  /* robot arm — push right of the card */
-.banner-slide:nth-child(2) { object-position: center 45%; }  /* bagatelle */
-.banner-slide:nth-child(3) { object-position: 55% center; }  /* warbird */
-.banner-slide:nth-child(4) { object-position: center 55%; }  /* truss */
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+/* Per-slide framing — each photo's subject sits somewhere different, and the
+   glass card occupies the left, so most are nudged right to stay clear of it. */
+.banner-slide:nth-child(1) { object-position: center 55%; }  /* bagatelle  */
+.banner-slide:nth-child(2) { object-position: 60% center; }  /* MEArm      */
+.banner-slide:nth-child(3) { object-position: 62% center; }  /* coolsculpt */
+.banner-slide:nth-child(4) { object-position: 58% center; }  /* warbird    */
+.banner-slide:nth-child(5) { object-position: center 45%; }  /* truss      */
 
 .banner-veil {
   position: absolute;
@@ -570,7 +553,8 @@ button.contact-card {
 
 /* Darker sibling of .hero-card */
 .banner-card {
-  display: inline-block;
+  display: block;
+  width: fit-content;   /* block-level so the CTA sits BELOW, not beside it */
   background: rgba(12, 14, 19, 0.62);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -589,7 +573,7 @@ button.contact-card {
   color: var(--text-primary);
 }
 .banner-cta {
-  display: inline-block;
+  display: block;
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--accent);
@@ -639,6 +623,147 @@ section[id] { scroll-margin-top: 72px; }
 .project-detail ul { color: var(--text-muted); max-width: 70ch; padding-left: 1.2rem; }
 .project-detail li { margin-bottom: 0.5rem; }
 .project-detail strong { color: var(--text-primary); }
+
+/* Personal statement + timeline (about/personal) */
+.statement p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  max-width: 68ch;
+}
+.statement strong { color: var(--accent); font-weight: 600; }
+.statement-rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 3.5rem 0 0;
+}
+.era { padding-top: 3.5rem; }
+.era-meta {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-subtle);
+  margin-bottom: 0.5rem;
+}
+.era h2 { font-size: 1.5rem; margin-top: 0; margin-bottom: 1rem; }
+.era p { max-width: 70ch; }
+
+/* Project detail — workflow steps.
+   Two columns: text on the left, a fixed media rail on the right. The rail is
+   sized for portrait photos, and keeps every image at or under its native
+   width so nothing is upscaled. */
+.step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* half text, half image */
+  gap: 3rem;
+  align-items: center;
+  padding-top: 3rem;
+  margin-top: 3rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Steps holding several stacked images use a narrower rail, so the column
+   doesn't tower over a short paragraph. Add: class="step step-multi" */
+.step-multi {
+  grid-template-columns: 1fr 340px;
+  align-items: start;
+}
+
+/* Named step heading (replaces the numbered variant) */
+.Step-title,
+.step-title {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+}
+.step-body > p:last-child { margin-bottom: 0; }
+.step-media { display: flex; flex-direction: column; gap: 1.25rem; }
+.step-media figure { margin: 0; }
+.step-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+.step-media .img-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+}
+
+/* Wide, centered showcase for a single portrait photo.
+   The photo itself is never cropped or upscaled — a blurred copy of the same
+   image fills the space either side, so the block spans the full column. */
+.figure-showcase { margin: 3rem 0 0; }
+.showcase-frame {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+.showcase-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(30px) brightness(0.4) saturate(0.75);
+  transform: scale(1.2);          /* pushes the blur's soft edge out of frame */
+  border: none;
+  border-radius: 0;
+}
+.showcase-fg {
+  position: relative;
+  display: block;
+  width: auto;
+  max-width: 480px;
+  height: auto;
+  border: none;
+  border-radius: 0;
+}
+.figure-showcase figcaption { text-align: center; }
+
+/* A single portrait image standing on its own, outside a step */
+.figure-center { margin: 3rem 0 0; max-width: 440px; }
+.figure-center img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+.step-number {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+.step h2 { margin-top: 0; margin-bottom: 1rem; font-size: 1.5rem; }
+
+/* Hero figure at the top of a project page */
+.project-hero-figure { margin: 2.5rem 0 0; }
+.project-hero-figure img,
+.project-hero-figure .img-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+figcaption {
+  font-size: 0.85rem;
+  color: var(--text-subtle);
+  margin-top: 0.6rem;
+}
 
 /* Image gallery */
 .gallery {
@@ -708,6 +833,10 @@ section[id] { scroll-margin-top: 72px; }
   section { padding: 4rem 0; }
   .about-grid { grid-template-columns: 1fr; }
   .projects-grid, .skills-grid, .door-grid { grid-template-columns: 1fr; }
+  .step, .step-multi { grid-template-columns: 1fr; gap: 1.75rem; align-items: start; }
+  .step-media { max-width: 340px; }
+  .figure-center { max-width: 340px; }
+  .showcase-fg { max-width: 100%; }
   .nav-toggle { display: block; }
   .nav-links {
     display: none;
