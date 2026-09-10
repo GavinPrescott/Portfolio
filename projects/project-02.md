@@ -27,7 +27,7 @@ permalink: /projects/project-02/
 
     <h1 class="page-title">Legacy Medical Machine Retrofit Project</h1>
 
-    <p class="lede"><span class="placeholder">[SHORT DESCRIPTION — one or two sentences. This also goes on the card in projects.md.]</span></p>
+    <p class="lede">SHORT DESCRIPTION — one or two sentences. This also goes on the card in projects.md.</p>
 
     <div class="tags">
       <span class="tag placeholder">[STM32]</span>
