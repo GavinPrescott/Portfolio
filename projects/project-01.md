@@ -86,24 +86,23 @@ permalink: /projects/project-01/
       </div>
     </div>
 
+    <!-- ========== FINISHED MACHINE — centered, blurred sides ========== -->
+    <figure class="figure-showcase">
+      <div class="showcase-frame">
+        <img class="showcase-bg" src="{{ '/assets/img/projects/bagatelle-final.jpg' | relative_url }}" alt="" aria-hidden="true">
+        <img class="showcase-fg" src="{{ '/assets/img/projects/bagatelle-final.jpg' | relative_url }}" alt="The finished bagatelle machine on its cast EPIC base">
+      </div>
+      <figcaption>The finished machine.</figcaption>
+    </figure>
+
     <!-- ========== OUTCOMES ========== -->
-    <div class="step">
-      <div class="step-body">
-        <h2>Outcomes</h2>
-        <p><strong>Fully playable Bagatelle machine built from scratch</strong></p>
-        <ul>
-          <li>All critical parts of the design met required tolerances allowing easy assembly of the final product</li>
-          <li>Gameplay and aesthetic blend for a design that is not only interesting to look at, but fun to play as well</li>
-          <li>Final product is fully playable, allowing for proper variations in gameplay from the spinners</li>
-        </ul>
-      </div>
-      <div class="step-media">
-        <figure>
-          <img src="{{ '/assets/img/projects/bagatelle-final.jpg' | relative_url }}" alt="The finished bagatelle machine on its cast EPIC base">
-          <figcaption>The finished machine.</figcaption>
-        </figure>
-      </div>
-    </div>
+    <h2>Outcomes</h2>
+    <p><strong>Fully playable Bagatelle machine built from scratch</strong></p>
+    <ul>
+      <li>All critical parts of the design met required tolerances allowing easy assembly of the final product</li>
+      <li>Gameplay and aesthetic blend for a design that is not only interesting to look at, but fun to play as well</li>
+      <li>Final product is fully playable, allowing for proper variations in gameplay from the spinners</li>
+    </ul>
 
     <!-- ========== SPEC BLOCK ========== -->
     <dl class="spec-list">
