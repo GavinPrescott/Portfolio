@@ -30,10 +30,10 @@ permalink: /projects/project-02/
     <p class="lede"><span class="placeholder">[SHORT DESCRIPTION — one or two sentences. This also goes on the card in projects.md.]</span></p>
 
     <div class="tags">
-      <span class="tag placeholder">[TOOL]</span>
-      <span class="tag placeholder">[TOOL]</span>
-      <span class="tag placeholder">[TOOL]</span>
-      <span class="tag placeholder">[TOOL]</span>
+      <span class="tag placeholder">[STM32]</span>
+      <span class="tag placeholder">[Soldering]</span>
+      <span class="tag placeholder">[CAD]</span>
+      <span class="tag placeholder">[Prototyping]</span>
     </div>
 
     <!-- ========== OVERVIEW ========== -->
