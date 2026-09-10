@@ -23,7 +23,7 @@ permalink: /projects/project-02/
     <a href="{{ '/projects/' | relative_url }}" class="back-link">Back to Projects</a>
 
     <!-- ========== TITLE BLOCK ========== -->
-    <p class="project-hero-meta"><span class="placeholder">[NN]</span> &middot; <span class="placeholder">[CATEGORY]</span> &middot; <span class="placeholder">[CONTEXT]</span></p>
+    <p class="project-hero-meta"><span class="placeholder">[02]</span> &middot; <span class="placeholder">[Reverse Engineering, Embedded Systems]</span> &middot; <span class="placeholder">[CONTEXT]</span></p>
 
     <h1 class="page-title"><span class="placeholder">[Legacy Medical Machine Retrofit Project]</span></h1>
 
